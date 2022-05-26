@@ -1,24 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    --primary-color: #00669F;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 .BarDiscount {
     background-color: #1cd1b0;
     height: 38px;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     padding: 10px;
 }
 
 .header {
-    background-color: #00669F;
+    background-color: var(--primary-color);
     height: 101px;
     box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
-    font-family: 'Roboto', sans-serif;
     font-size: 40px;
 }
 
@@ -28,26 +28,26 @@
     top: 66px;
 }
 
+main {
+    margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px
+}
+
 .card {
-    background-color: #f3f3f3;
     width: 374px;
-    height: 597px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    position: relative;
-    margin: 100px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
+  height: 580px;
 
-.card__batman {
-    position:relative;
-    left: 20%;
-}
+  background-color: var(--card-background);
+  border-radius: 16px 16px 0px 0px;
 
-.card__arlequina {
-    position:relative;
-    left: 50%;
-    bottom: 697px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0px 7px 6px -1px rgba(0, 0, 0, 0.47);
 }
 
 .card__background {
@@ -57,21 +57,20 @@
 
 .background-batman {
     background-image: url(../img/background-batman.png);
-    width: 374px;
-         
+             
 }
 
 .background-arlequina {
     background-image: url(../img/background-arlequina.png);
-    width: 374px;
     
 }
 
-.icon__perfil {
+.icon__perfil img {
     position: relative;
     left: 119px;
     bottom: 75px;
-    
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .icon__like {
@@ -80,35 +79,49 @@
     left: 20px;
 }
 
-.card__conteudo {
-    width: 374;
-    height: 379;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    padding: 36px;
-    
-}
-
-.card__conteudo--title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    
-}
-
-.button {
-    background-color: #00669F;
-    width: 145px;
-    height: 54px;
-    position:absolute;
-    left: 30%;
-    
-}
-
-.button__vermais {
-    color: #f3f3f3;
-    text-decoration: none;
+.card__titulo {
     position: relative;
-    top: 30%;
-    
+    bottom: 50px;
 }
+
+.card__conteudo {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  margin: 10px 20px;
+  text-align: justify;
+  flex-grow: 1;
+  
+}
+
+.card__botao {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+
+  width: 145.34px;
+  height: 54.76px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #f3f3f3;
+
+  margin: 20px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    height: 51px;
+    width: 100%;
+    color: #fff9f9;
+    padding: 10px;
+  }
